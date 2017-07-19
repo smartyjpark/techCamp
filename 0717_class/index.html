@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>tabUI</title>
+    <link rel="stylesheet" href="tabUI.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="mainView" >
+            <header class="mainHeader" ><img src="https://avatars5.githubusercontent.com/u/4853259?v=4&s=460" width="80" >
+                <div class="userId" ><span > </span><span >nigayo</span>
+                </div>
+                <div class="userMessage" ><span > </span><span >안녕하세요 nigayo입니다.</span>
+                <button id="connect-json">버튼</button>
+                </div>
+                <ul class="userSNSInfo" >
+                    <li ><span >review : </span><span class="count" >10</span><span > | </span>
+                    </li>
+                    <li ><span >follower : </span><span class="count" ><span >12</span><span > </span></span><span > | </span>
+                    </li>
+                    <li ><span >following : </span><span class="count" ><span >30</span><span > </span></span><span > </span>
+                    </li>
+                </ul>
+            </header>
+            <nav id="tab-wrapper">
+                <div class="tab selectedTab" id="1" ><span > </span><span >aboutMe</span><span > </span>
+                </div>
+                <div class="tab" id="2" ><span > </span><span >friend</span><span > </span>
+                </div>
+                <div class="tab" id="3" ><span > </span><span >lorem</span><span > </span>
+                </div>
+                <div class="tab" id="4" ><span > </span><span >repository</span><span > </span>
+                </div>
+                <div class="tab" id="5" ><span > </span><span >qna</span><span > </span>
+                </div>
+            </nav>
+            <section id="section1" class="eleDisplayShow" >
+                <ul >
+                    <li >
+                        <div class="myName" >blah blah !</div>
+                        <div class="myDesc" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque recusandae hic obcaecati maxime officiis commodi! Cumque maiores maxime quam quidem deleniti, aspernatur iste, minima sit laboriosam laudantium saepe dignissimos provident.</div>
+                    </li>
+                </ul>
+            </section>
+            <section id="section2">my_friendmy_friendmy_friend
+            my_friendmy_friendmy_friendmy_friend
+            my_friendmy_friendmy_friend </section>
+            <section id="section3" > my_thememy_thememy_theme
+            my_thememy_thememy_thememy_thememy_theme</section>
+            <section id="section4"> my_newsmy_newsmy_newsmy_news
+            my_newsmy_newsmy_news</section>
+            <section id="section5"> QnAQnAQnAQnAQnAQnAQnAQnAQnAQnAQnAQnAQnA</section>
+        </div>
+    </div>
+<script type="text/x-handlebars-template" id="myTemplate">
+<ul>
+    {{#jsonContent}}
+    <li>
+        <div>name : {{name}}</div>
+            <div class="content">content : {{content}}</div>
+            <div> <span>{{like}}</span></div> 
+            <div class="comment">comment : {{comment}}</div>
+    </li>
+    {{/jsonContent}}
+</ul>
+</script>
+<script type="text/x-handlebars-template" id="myTemplateBody">
+<div>
+<h1> <%=title%> </h1>
+<span> <%=body%> </span>
+</div>
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script type="text/javascript" src="template.js"></script>
+</body>
+</html>

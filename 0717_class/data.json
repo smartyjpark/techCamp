@@ -1,0 +1,6 @@
+[
+	{"id" : 88, "name" : "crong", "content" : "반갑습니다", "like" : 5, "comment" : ["댓글이다"]}, 
+	{"id" : 72, "name" : "jun", "content" : "반가워욯ㅎㅎㅎ", "like" : 1, "comment" : ["안녕!"]}, 
+	{"id" : 4, "name" : "tzsdr", "content" : "뉴비다!", "like" : 2, "comment" : ["뭐함"]}, 
+	{"id" : 2, "name" : "qwerty", "content" : "ㅇㄱㄹㅇ", "like" : 3, "comment" : ["배고파"]}
+]
