@@ -30,14 +30,11 @@ function moveNext() {
 	if (viewIndex === -1600){
 		viewIndex = 0;
 		console.log("move if " + viewIndex)
-		setTimeout(function(){
-			document.querySelector('.list-view').style.transition = "";
-			document.querySelector('.list-view').style.transform = "translateX(0px)";
-		}, 1)
-		
+		document.querySelector('.list-view').style.transition = "";
+		document.querySelector('.list-view').style.transform = "translateX(0px)";
 		console.log(document.querySelector('.list-view').style.transform)
 
-	} 
+	}
 	viewIndex -= 800;
 	const index = viewIndex + "px";
 	console.log("move " + viewIndex)
@@ -45,18 +42,15 @@ function moveNext() {
 	setTimeout(function(){
 			document.querySelector('.list-view').style.transform = translateX;
 			document.querySelector('.list-view').style.transition = "0.3s";
-		}, 50)
+	}, 50)
 	
 }
 
 function movePrev(){
 	if (viewIndex === 0){
 		viewIndex = -1600;
-		setTimeout(function(){
-			document.querySelector('.list-view').style.transition = "";
-			document.querySelector('.list-view').style.transform = "translateX(-1600px)";
-		}, 1)
-		
+		document.querySelector('.list-view').style.transition = "";
+		document.querySelector('.list-view').style.transform = "translateX(-1600px)";		
 		console.log(document.querySelector('.list-view').style.transform)
 	}
 	viewIndex += 800
@@ -66,7 +60,8 @@ function movePrev(){
 	setTimeout(function(){
 			document.querySelector('.list-view').style.transform = translateX;
 			document.querySelector('.list-view').style.transition = "0.3s";
-		}, 50)
+	}, 50)
+
 }
 
 function fakeInfinite(){
@@ -85,18 +80,11 @@ function fakeInfinite(){
 }
 
 banchan.slideNext.addEventListener("click", function(e){
-
 	moveNext()
-	// fakeInfinite()
-
-	
-
 });
 
 banchan.slidePrev.addEventListener("click", function(e){
-	// overflowCheck()
 	movePrev()
-	// fakeInfinite()
 });
 
 moveFirst()
