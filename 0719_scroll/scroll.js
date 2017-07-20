@@ -27,21 +27,46 @@ function overflowCheck(){
 }
 
 function moveNext() {
+	if (viewIndex === -1600){
+		viewIndex = 0;
+		console.log("move if " + viewIndex)
+		setTimeout(function(){
+			document.querySelector('.list-view').style.transition = "";
+			document.querySelector('.list-view').style.transform = "translateX(0px)";
+		}, 1)
+		
+		console.log(document.querySelector('.list-view').style.transform)
+
+	} 
 	viewIndex -= 800;
 	const index = viewIndex + "px";
+	console.log("move " + viewIndex)
 	const translateX = "translateX("+index+")";
-	console.log(viewIndex);
-	document.querySelector('.list-view').style.transform = translateX;
-	document.querySelector('.list-view').style.transition = "0.3s";
+	setTimeout(function(){
+			document.querySelector('.list-view').style.transform = translateX;
+			document.querySelector('.list-view').style.transition = "0.3s";
+		}, 50)
+	
 }
 
 function movePrev(){
-		viewIndex += 800
-		console.log(viewIndex)
-		const index = viewIndex+"px"
-		const translateX = "translateX("+index+")"
-		document.querySelector('.list-view').style.transform = translateX;
-		document.querySelector('.list-view').style.transition = "0.3s";
+	if (viewIndex === 0){
+		viewIndex = -1600;
+		setTimeout(function(){
+			document.querySelector('.list-view').style.transition = "";
+			document.querySelector('.list-view').style.transform = "translateX(-1600px)";
+		}, 1)
+		
+		console.log(document.querySelector('.list-view').style.transform)
+	}
+	viewIndex += 800
+	console.log(viewIndex)
+	const index = viewIndex+"px"
+	const translateX = "translateX("+index+")"
+	setTimeout(function(){
+			document.querySelector('.list-view').style.transform = translateX;
+			document.querySelector('.list-view').style.transition = "0.3s";
+		}, 50)
 }
 
 function fakeInfinite(){
@@ -49,6 +74,7 @@ function fakeInfinite(){
 		setTimeout(function() {
 		document.querySelector('.list-view').style.transition = "";
 		document.querySelector('.list-view').style.transform = "translateX(0px)";
+		console.log("fake " + viewIndex)
 		},200)
 	} else if(viewIndex == 0) {
 		setTimeout(function() {
@@ -59,18 +85,18 @@ function fakeInfinite(){
 }
 
 banchan.slideNext.addEventListener("click", function(e){
-	overflowCheck()
+
 	moveNext()
-	fakeInfinite()
+	// fakeInfinite()
 
 	
 
 });
 
 banchan.slidePrev.addEventListener("click", function(e){
-	overflowCheck()
+	// overflowCheck()
 	movePrev()
-	fakeInfinite()
+	// fakeInfinite()
 });
 
 moveFirst()
