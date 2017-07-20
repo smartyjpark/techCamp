@@ -17,15 +17,6 @@ function moveFirst(){
 	document.querySelector('.list-view').style.transform = "translateX(-800px)";
 }
 
-function overflowCheck(){
-	if (viewIndex === -1600){
-		viewIndex = 0;
-	} 
-	else if (viewIndex === 0){
-		viewIndex = -1600;
-	}
-}
-
 function moveNext() {
 	if (viewIndex === -1600){
 		viewIndex = 0;
@@ -62,21 +53,6 @@ function movePrev(){
 			document.querySelector('.list-view').style.transition = "0.3s";
 	}, 50)
 
-}
-
-function fakeInfinite(){
-	if(viewIndex == -1600) {
-		setTimeout(function() {
-		document.querySelector('.list-view').style.transition = "";
-		document.querySelector('.list-view').style.transform = "translateX(0px)";
-		console.log("fake " + viewIndex)
-		},200)
-	} else if(viewIndex == 0) {
-		setTimeout(function() {
-		document.querySelector('.list-view').style.transition = "";
-		document.querySelector('.list-view').style.transform = "translateX(-1600px)";
-		},200)
-	}
 }
 
 banchan.slideNext.addEventListener("click", function(e){
