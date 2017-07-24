@@ -2,175 +2,155 @@
 <html>
 <head>
 	<title>Baemin Fresh</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.bmf.kr/static/css/style_common.v-de5db02e.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.bmf.kr/static/css/style_content.v-de5db02e.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.bmf.kr/static/css/style_function.v-de5db02e.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.bmf.kr/static/css/style_main.v-de5db02e.css">
 </head>
 
 <style>
-	header,nav,section,div,footer,ul,dd {margin:0;padding:0;}
-	li{list-style: none;}
-	.main_slides_wrap {
-        		text-align: center;
-        		max-width: 1920px;
-        		margin: 0 auto;
-        	}
-        	.slides_container {
-        		position: relative;
-        		height: 420px;
-        	}
-        	.main_slides_wrap .bx-wrapper {
-        		text-align: left;
-        	}
-        	.bx-wrapper {
-        		margin: 0 auto;
-        		background: #fff;
-        	}
-        	.slides_container ul.slides_pagination {
-        		z-index: 55;
-        		position: relative;
-        		bottom: 30px;
-        		width: 100%;
-        		height: 0;
-        		overflow: visible;
-        	}
-        	ul.main_slides_lst {
-        		overflow: hidden;
-        		height: 420px;
-        	}
-        	ul.main_slides_lst li a {
-        		display: block;
-        		width: 980px;
-        		height: 420px;
-        		margin: 0 auto;
-        		overflow: hidden;
-        		text-indent: -3000px;
-        	}
-        	.slides_container ul.slides_pagination {
-        		z-index: 55;
-        		position: relative;
-        		bottom: 30px;
-        		width: 100%;
-        		height: 0;
-        		overflow: visible;
-        	}
-        	.slides_container ul.slides_pagination li {
-        		display: inline-block;
-        		vertical-align: top;
-        		padding: 0 3px;
-        	}
-        	.slides_container div.slides_navi {
-        		width: 100%;
-        	}
-        	.slides_container div.slides_navi a.slides_prev {
-        		right: 50%;
-        		margin-right: 530px;
-        		background-position: left center;
-        	}
-        	.slides_container div.slides_navi a {
-        		z-index: 55;
-        		display: block;
-        		width: 60px;
-        		height: 92px;
-        		text-indent: -3000px;
-        		overflow: hidden;
-        		position: absolute;
-        		top: 50%;
-        		margin-top: -46px;
-        		background: url(https://cdn.bmf.kr/web/common/main_slides_navi.png) no-repeat center center;
-        	}
-        	.slides_container div.slides_navi a.slides_next {
-        		left: 50%;
-        		margin-left: 530px;
-        		background-position: right center;
-        	}
-        	.slides_container ul.slides_pagination li a {
-        		display: block;
-        		width: 10px;
-        		height: 0;
-        		padding: 10px 0 0 0;
-        		overflow: hidden;
-        		background: #FFF;
-        		-webkit-border-radius: 50%;
-        		-moz-border-radius: 50%;
-        		border-radius: 50%;
-        		-webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
-        		-moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
-        		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
-        		opacity: 0.6;
-        		filter: alpha(opacity=60);
-        	}
-
-    body {
-    }
+header,nav,section,div,footer,ul,dd {margin:0;padding:0;}
+li{list-style: none;}
+.main_slides_wrap {
+	text-align: center;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+.slides_container {
+	position: relative;
+	height: 420px;
+}
+.main_slides_wrap .bx-wrapper {
+	text-align: left;
+}
+.bx-wrapper {
+	margin: 0 auto;
+	background: #fff;
+}
+.slides_container ul.slides_pagination {
+	z-index: 55;
+	position: relative;
+	bottom: 30px;
+	width: 100%;
+	height: 0;
+	overflow: visible;
+}
+ul.main_slides_lst {
+	overflow: hidden;
+	height: 420px;
+}
+ul.main_slides_lst li a {
+	display: block;
+	width: 980px;
+	height: 420px;
+	margin: 0 auto;
+	overflow: hidden;
+	text-indent: -3000px;
+}
+.slides_container ul.slides_pagination {
+	z-index: 55;
+	position: relative;
+	bottom: 30px;
+	width: 100%;
+	height: 0;
+	overflow: visible;
+}
+.slides_container ul.slides_pagination li {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 3px;
+}
+.slides_container div.slides_navi {
+	width: 100%;
+}
+.slides_container div.slides_navi a.slides_prev {
+	right: 50%;
+	margin-right: 530px;
+	background-position: left center;
+}
+.slides_container div.slides_navi a {
+	z-index: 55;
+	display: block;
+	width: 60px;
+	height: 92px;
+	text-indent: -3000px;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	margin-top: -46px;
+	background: url(https://cdn.bmf.kr/web/common/main_slides_navi.png) no-repeat center center;
+}
+.slides_container div.slides_navi a.slides_next {
+	left: 50%;
+	margin-left: 530px;
+	background-position: right center;
+}
+.slides_container ul.slides_pagination li a {
+	display: block;
+	width: 10px;
+	height: 0;
+	padding: 10px 0 0 0;
+	overflow: hidden;
+	background: #FFF;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
 
 
-	.header{
-		width: 100%;
-		background-color: black;
-		font-family: :"NanumBold", 맑은고딕, "Malgun Gothic", sans-serif;
-		color: white;
-		font-size: 36px;
-	}
+/*modal part */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
-	.top-of-top {
-		padding: 20px;
-	}
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
 
-	.nav-bar{
-		background-color: #483f35;
-		width: 100%;
-		height: 50px;
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
 
-	}
-	.nav-bar ul li{
-		text-align: center;
-		display: inline-block;
-		float: left;
-		margin-left: 30px;
-		text-decoration: none;
-        color: #333;
-	}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-	.nav-bar a{
-		text-decoration: none;
-        color: #777777;
-	}
 
-	.contents-wrapper-wrapper{
-		background-color: #eee;
-	}
 
-	.contents-wrapper{
-		height: 680px;
-		background-color: #eee;
-
-	}
-
-	.content {
-		width: 980px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.mtlt{
-		text-align: center;
-	}
 
 
 </style>
 
 <body>
-<div class="header">
-	<div class="top-of-top">Yejun Fresh</div>
-	<div class="nav-bar">
-		<ul>
-			<li><a href="#">삼겹살</a></li>
-			<li><a href="#">회</a></li>
-			<li><a href="#">소고기</a></li>
-			<li><a href="#">소주</a></li>
-			<li><a href="#">맥주</a></li>
-			<li><a href="#">막걸리</a></li>
-		</ul>
-	</div>
-</div>
+
 
 <div class="middle">
 	<div class="main-slider">
@@ -253,28 +233,80 @@
 	
 	<div class="contents-wrapper-wrapper">
 		<div class="content contents-wrapper">
-			<div class="mtlt">
-                <h2 class="mtlt_h2">
-                    <img src="https://cdn.bmf.kr/web/@sample/main_tlt/mtlt_best_hmr.png" alt="베스트셀러 - 후기가 증명하는 베스트 반찬">
-                </h2>
+			<div class="wrap best_prds_lst_wrap">
+                <div class="content best_prds_lst ">
+                    <div class="mtlt">
+                        <h2 class="mtlt_h2">
+                            <img src="https://cdn.bmf.kr/web/@sample/main_tlt/mtlt_best_hmr.png" alt="베스트셀러 - 후기가 증명하는 베스트 반찬">
+                        </h2>
+                    </div>
+                    <ul id="best-tabs" class="best_tab_lst">
+                        <li><a href="#best-17010200" class = "now" id="17010200">시원한 여름별미</a></li>
+                        <li><a href="#best-17010200" id="17011400">여름 보양식</a></li>
+                        <li><a href="#best-17010200" id="17011200">할인특가 세트상품</a></li>
+                        <li><a href="#best-17010200" id="17011000">풍성한 고기반찬 </a></li>
+                        <li><a href="#best-17010200" id="17011100">바다향가득 반찬</a></li>
+                        <li><a href="#best-17010200" id="17010300" class="last">간편한 덮밥요리</a></li>
+                    </ul>
+
+                    <div id="best-container">
+                       
+                    </div>
+
+                    
+
+                </div>
             </div>
-            <ul class="tabs" id="best-tabs">
-            
-			</ul>
-				<div class="tabs-conainer">
-						
-						
-				</div>
-			<div class="content-slider-wrapper">
-				
-			</div>
+
 		</div>
 	</div>
 
 </div>
+<div id="myModal" class="modal" style = "z-index: 100">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="best-modal"></div>
+  </div>
+</div>
 
-<div class="footer"></div>
+<div class="footer">
+</div>
 
-<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="api.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script type="text/x-handlebars-template" id="tab-contents">
+<ul id="best-content-ul" class="prds_box_lst col3">
+    {{#items}}
+    <li class="prd_box last">
+        <a href="#" id={{detail_hash}} ga_id={{detail_hash}} ga_name={{title}}>
+            <div class="thumb_img">
+                <p><img src={{image}} alt={{alt}}></p>
+                <div class="delivery_type_lst">
+                    <div>
+                        <ul>
+                            <li class="d1"><span>{{delivery_type}}</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <dl>
+                <dt class="prd_tlt">{{title}}</dt>
+                <dd class="prd_description">{{description}}</dd>
+                <dd class="prd_price">
+                    <span class="s_price">{{s_price}}<span class="won">원</span></span>
+                </dd>
+            </dl>
+            <div class="badge_area">
+            	{{badge}}
+            </div>
+        </a>
+    </li>
+    {{/items}}
+</ul>
+</script>
+<script type="text/x-handlebars-template" id="modal-contents">
+	<img src={{top_image}}>
+</script>
 </body>
 </html>
