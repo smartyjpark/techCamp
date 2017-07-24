@@ -114,7 +114,7 @@ ul.main_slides_lst li a {
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    overflow: scroll; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -262,7 +262,7 @@ ul.main_slides_lst li a {
 	</div>
 
 </div>
-<div id="myModal" class="modal" style = "z-index: 100">
+<div id="myModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
     <div class="best-modal"></div>
@@ -278,8 +278,12 @@ ul.main_slides_lst li a {
 <script type="text/x-handlebars-template" id="tab-contents">
 <ul id="best-content-ul" class="prds_box_lst col3">
     {{#items}}
+    {{#if @last}}
     <li class="prd_box last">
-        <a href="#" id={{detail_hash}} ga_id={{detail_hash}} ga_name={{title}}>
+    {{else}}
+    <li class="prd_box">
+    {{/if}}
+        <a href="#best-content-ul" id={{detail_hash}} ga_id={{detail_hash}} ga_name={{title}}>
             <div class="thumb_img">
                 <p><img src={{image}} alt={{alt}}></p>
                 <div class="delivery_type_lst">
@@ -294,11 +298,18 @@ ul.main_slides_lst li a {
                 <dt class="prd_tlt">{{title}}</dt>
                 <dd class="prd_description">{{description}}</dd>
                 <dd class="prd_price">
-                    <span class="s_price">{{s_price}}<span class="won">원</span></span>
+                	<span class="n_price">{{n_price}}</span>
+                    <span class="s_price">{{s_price}}</span>
                 </dd>
             </dl>
             <div class="badge_area">
-            	{{badge}}
+            	{{#each badge}}
+	            	{{#if @this}}
+		            	<div class="badge launching">
+			            	<span>{{@this}}</span>
+		            	</div>
+            		{{/if}}
+            	{{/each}}
             </div>
         </a>
     </li>
@@ -306,6 +317,7 @@ ul.main_slides_lst li a {
 </ul>
 </script>
 <script type="text/x-handlebars-template" id="modal-contents">
+	<h1>{{product_description}}</h1>
 	<img src={{top_image}}>
 </script>
 </body>
