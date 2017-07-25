@@ -19,7 +19,6 @@ class Swipe {
 		this.selector.addEventListener('touchstart', (e) => this.setStartPoint(e));
 		this.selector.addEventListener('touchmove', (e) => this.dragMove(e));
 		this.selector.addEventListener('touchend', (e) => this.swipeCheck(e));
-
 	}
 
 	setStartPoint(e){
@@ -36,7 +35,7 @@ class Swipe {
 	}
 
 	setTotalDistance(){
-		this.totalDistance += window.innerWidth*this.dir;
+		this.totalDistance += this.pageWidth*this.dir;
 	}
 
 	setDir(){
@@ -51,7 +50,8 @@ class Swipe {
 		this.index -= this.dir;
 	}
 
-	translate(distance){
+	translate(distance, transition){
+		this.selector.style.transition = transition
 		this.selector.style.transform = "translateX("+distance+"px)";
 	}
 
@@ -63,7 +63,7 @@ class Swipe {
 	}
 
 	swipeCheck(){
-		if (Math.abs(this.pointDistance) / window.innerWidth < 0.25 || this.index-this.dir < 0 || this.index-this.dir > this.numOfBox-1){
+		if (Math.abs(this.pointDistance) / this.pageWidth < 0.25 || this.index-this.dir < 0 || this.index-this.dir > this.numOfBox-1){
 			this.swipeComeback();
 		} else {
 			this.swipeMove();
@@ -71,14 +71,12 @@ class Swipe {
 	}
 
 	swipeComeback(){
-		this.selector.style.transition = "0.15s";
-		this.translate(this.totalDistance);
+		this.translate(this.totalDistance, "0.15s");
 	}
 
 	swipeMove(){
 		this.setTotalDistance()
-		this.selector.style.transition = "0.3s";
-		this.translate(this.totalDistance);
+		this.translate(this.totalDistance, "0.3s");
 		this.setIndex()
 	}
 
