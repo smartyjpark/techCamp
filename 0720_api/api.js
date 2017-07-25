@@ -133,8 +133,6 @@ class Slider{
 			dots.style.zindex = 0;
 			dots.style.opacity = 0;
 			dots.style.transition = "0.7s";
-
-			// dots.style += {zindex: '0', opacity: '0', transition: '0.7s'};
 		});
 	}
 
@@ -144,8 +142,9 @@ class Slider{
 		targetDot.style.zindex = 50;
 		targetDot.style.display="inline-block"
 		targetDot.style.opacity = 1;
-		targetDot.style.transition = "1.2s";	
-		// targetDot.style += {zindex: '50', opacity: '1', display: 'none', transition: '1.2s'};
+		targetDot.style.transition = "1.2s";
+		document.querySelector('a.now').classList.remove("now")
+		document.querySelectorAll('.slides_pagination > li > a')[this.index].classList.add("now")
 	}
 
 	dotsInnerEvent(e, animate){
@@ -154,6 +153,7 @@ class Slider{
 	}
 
 	setSlider(){
+		// this.selectedDot.classList.remove("now")
 		this.dotsListControl();
 		this.targetDotControl();
 	}
@@ -181,9 +181,9 @@ class Slider{
 
 	arrowInnerEvent(e, animate){
 		this.arrowIndex(e);
-		// console.log("animate")
 		requestAnimationFrame(animate);
 	}
+
 
 	startSlider(){
 		const freshSlider = new Slider("freshSlider");
