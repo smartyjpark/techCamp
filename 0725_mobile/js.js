@@ -30,7 +30,7 @@ class Swipe {
 	}
 
 	setMoveDistance(){
-		this.pointDistance = -(this.startPoint - this.currentPoint)*0.5;
+		this.pointDistance = (this.currentPoint - this.startPoint)*0.5;
 		this.moveDistance = this.totalDistance + this.pointDistance;
 	}
 
