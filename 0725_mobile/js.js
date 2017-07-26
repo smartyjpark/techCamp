@@ -38,6 +38,10 @@ class Swipe {
 		this.totalDistance += this.pageWidth*this.dir;
 	}
 
+	setIndex(){
+		this.index -= this.dir;
+	}
+
 	setDir(){
 		if (this.startPoint < this.currentPoint){
 				this.dir = 1;
@@ -46,8 +50,8 @@ class Swipe {
 		}
 	}
 
-	setIndex(){
-		this.index -= this.dir;
+	resetDir(){
+		this.dir = 0;
 	}
 
 	translate(distance, transition){
@@ -63,7 +67,8 @@ class Swipe {
 	}
 
 	swipeCheck(){
-		if (Math.abs(this.pointDistance) / this.pageWidth < 0.25 || this.index-this.dir < 0 || this.index-this.dir > this.numOfBox-1){
+		const postIndex = this.index-this.dir
+		if (Math.abs(this.pointDistance) / this.pageWidth < 0.25 || postIndex < 0 || postIndex > this.numOfBox-1){
 			this.swipeComeback();
 		} else {
 			this.swipeMove();
@@ -78,6 +83,7 @@ class Swipe {
 		this.setTotalDistance()
 		this.translate(this.totalDistance, "0.3s");
 		this.setIndex()
+		this.resetDir()
 	}
 
 }
